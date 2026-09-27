@@ -1,0 +1,11 @@
+{
+  "case_index": 1936,
+  "training_seed": 20260905,
+  "beta": 5.224799156188965,
+  "tau_0": 1.000272512435913,
+  "mse": 4.8050681930457744e-08,
+  "relative_l2": 0.00013318394605837619,
+  "test_median_relative_l2": 0.00032563234306205,
+  "test_case_count": 2048,
+  "selection_rule": "minimum test-set trajectory relative L2 error"
+}

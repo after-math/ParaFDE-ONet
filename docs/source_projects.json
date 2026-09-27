@@ -1,0 +1,10 @@
+{
+  "VariableDelayCompetition2D_4Methods_1Seed_2026-08-18": "experiments/competition",
+  "DelayedSEI3D_4Methods_NormalizedSensitivity_5Seeds_2026-08-20": "experiments/sei",
+  "NicholsonPatch4D_4Methods_1Seed_2026-08-18": "experiments/nicholson",
+  "DelayedSmartGrid4Node8D_Config_2026-09-14": "experiments/smart_grid",
+  "ThreeSystemsPanelInverseBenchmark": "benchmarks/inverse",
+  "ThreeSystemsSensitivityJacobianBenchmark": "benchmarks/sensitivity_jacobian",
+  "NicholsonFeatureReuseBenchmark": "benchmarks/feature_reuse",
+  "CSTRDelayedCooling_LM_SupplementaryExperiment_Complete_2026-08-31": "experiments/cstr"
+}

@@ -1,0 +1,29 @@
+{
+  "system": "competition",
+  "noise_standard_deviation": 0.005,
+  "selection_rule": "Frozen LM parameter NRMSE closest to the median",
+  "pool_median_parameter_nrmse": 0.00769811315416545,
+  "panel_index": 5,
+  "case_index": 36,
+  "history_index": 0,
+  "history_count_in_inverse_objective": 1,
+  "true_parameters": [
+    1.3032070870186117,
+    1.3331324858747355
+  ],
+  "frozen_lm_parameters": [
+    1.3088237047195435,
+    1.3364511728286743
+  ],
+  "lm_parameters": [
+    1.308094158919889,
+    1.3372372435795343
+  ],
+  "de_parameters": [
+    1.3080662491431758,
+    1.3372571311085855
+  ],
+  "frozen_lm_parameter_nrmse": 0.0076883820629158,
+  "lm_parameter_nrmse": 0.007521497669953,
+  "de_parameter_nrmse": 0.0075114870233973
+}

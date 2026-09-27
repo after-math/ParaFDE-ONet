@@ -1,0 +1,4 @@
+model_type,prediction_relative_error,parameter_gradient_relative_error
+single_branch_deeponet,2.3781324203612497e-07,3.477785185479015e-08
+four_branch_mionet,2.5746754706624124e-07,1.4202076470208059e-07
+separate_parameter_shared,2.642507568681903e-07,7.16540489354336e-08

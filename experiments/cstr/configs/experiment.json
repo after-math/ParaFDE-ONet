@@ -1,0 +1,140 @@
+{
+  "experiment_name": "cstr_delayed_cooling_parafdeonet_shared_p_industrial_1seed",
+  "randomness": {
+    "data_seed": 20260829,
+    "training_seed": 20261001
+  },
+  "equation": {
+    "delay": 1.0,
+    "beta": 1.0,
+    "gamma": 1.5,
+    "condition_bounds": [
+      [
+        0.8,
+        1.2
+      ],
+      [
+        0.8,
+        1.4
+      ],
+      [
+        0.25,
+        3.0
+      ],
+      [
+        -0.5,
+        0.35
+      ]
+    ],
+    "condition_names": [
+      "k",
+      "kappa",
+      "D",
+      "Tc"
+    ],
+    "inverse_condition_indices": [
+      0,
+      1
+    ]
+  },
+  "data": {
+    "history_count": 4096,
+    "condition_count": 4096,
+    "pairs_per_history": 6,
+    "validation_count": 2048,
+    "test_count": 2048,
+    "history_sensors": 101,
+    "burn_in_horizon": 20.0,
+    "history_endpoint_min": 10.0,
+    "prediction_horizon": 30.0,
+    "output_points": 601,
+    "internal_step": 0.01,
+    "candidate_batch": 2048,
+    "solver_chunk_size": 64,
+    "normal_temperature_limit": 0.6,
+    "normal_conversion_minimum": 0.5,
+    "normal_late_temperature_std_limit": 0.025,
+    "sensitivity_finite_difference_steps": [
+      0.004,
+      0.006
+    ]
+  },
+  "operator": {
+    "condition_feature_mode": "shared_p",
+    "activation": "gelu",
+    "latent_dim": 512,
+    "history_width": 768,
+    "history_depth": 11,
+    "condition_width": 512,
+    "condition_depth": 9,
+    "trunk_width": 768,
+    "trunk_depth": 9,
+    "fourier_modes": 12,
+    "iterations": 40000,
+    "data_pretrain_iterations": 10000,
+    "physics_ramp_iterations": 8000,
+    "supervised_pair_batch": 82,
+    "physics_pool_batch": 7,
+    "residual_points": 48,
+    "sensitivity_points": 48,
+    "data_weight": 1.0,
+    "interface_weight": 8.0,
+    "k_sensitivity_weight": 0.01,
+    "kappa_sensitivity_weight": 0.05,
+    "physics_weight": 0.05,
+    "learning_rate": 0.0003,
+    "warmup_learning_rate": 5e-06,
+    "minimum_learning_rate": 1e-06,
+    "warmup_iterations": 1500,
+    "weight_decay": 1e-06,
+    "gradient_clip": 1.0,
+    "validation_every": 500,
+    "evaluation_batch_size": 128,
+    "physics_pairing_mode": "online_cartesian"
+  },
+  "acceptance": {
+    "validation_relative_l2_max": 0.05,
+    "test_relative_l2_max": 0.05,
+    "test_temperature_relative_l2_max": 0.1,
+    "zero_predictor_improvement_minimum": 0.9
+  },
+  "smoke": {
+    "history_count": 8,
+    "condition_count": 8,
+    "pairs_per_history": 2,
+    "validation_count": 4,
+    "test_count": 4,
+    "history_sensors": 101,
+    "burn_in_horizon": 2.0,
+    "history_endpoint_min": 1.0,
+    "prediction_horizon": 1.0,
+    "output_points": 21,
+    "internal_step": 0.01,
+    "candidate_batch": 64,
+    "solver_chunk_size": 4,
+    "normal_temperature_limit": 1.2,
+    "normal_conversion_minimum": 0.0,
+    "normal_late_temperature_std_limit": 1.0,
+    "sensitivity_finite_difference_steps": [
+      0.004,
+      0.006
+    ],
+    "latent_dim": 16,
+    "history_width": 24,
+    "history_depth": 2,
+    "condition_width": 24,
+    "condition_depth": 2,
+    "trunk_width": 24,
+    "trunk_depth": 2,
+    "fourier_modes": 2,
+    "iterations": 3,
+    "data_pretrain_iterations": 1,
+    "physics_ramp_iterations": 1,
+    "supervised_pair_batch": 2,
+    "physics_pool_batch": 2,
+    "residual_points": 3,
+    "sensitivity_points": 3,
+    "validation_every": 1,
+    "evaluation_batch_size": 2
+  }
+}

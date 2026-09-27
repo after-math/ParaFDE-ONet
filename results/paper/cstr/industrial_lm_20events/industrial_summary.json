@@ -1,0 +1,275 @@
+{
+  "network_format": "cstr_parafdeonet_2state_4condition_shared_p_v2",
+  "checkpoint_iteration": 39000,
+  "condition_feature_mode": "shared_p",
+  "old_parameters": [
+    1.0,
+    1.1
+  ],
+  "old_control": [
+    1.625,
+    0.18000000715255737
+  ],
+  "old_context": {
+    "old_screen_seconds": 5.1488408436998725,
+    "old_control_index": 5130,
+    "old_productivity_predicted": 0.8494792580604553,
+    "old_maximum_temperature": 0.5737018585205078,
+    "old_conversion": 0.5227564573287964,
+    "old_temperature_std": 8.436434654868208e-06
+  },
+  "config": {
+    "seed": 20261001,
+    "event_seed": 20261002,
+    "old_parameters": [
+      1.0,
+      1.1
+    ],
+    "representative_parameters": [
+      1.15,
+      0.9
+    ],
+    "event_count": 20,
+    "event_minimum_normalized_jump": 0.15,
+    "noise_levels": [
+      0.0,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "pipeline_noise_fraction": 0.02,
+    "timing_repeats_representative": 5,
+    "timing_repeats_events": 1,
+    "control_grid_points": 101,
+    "parameter_grid_points": 41,
+    "parameter_grid_topk": 10,
+    "para_lm_starts": 3,
+    "para_lm_minimum_iterations": 3,
+    "para_lm_max_iterations": 20,
+    "para_lm_initial_damping": 0.01,
+    "para_lm_damping_increase": 10.0,
+    "para_lm_damping_decrease": 3.0,
+    "para_lm_minimum_damping": 1e-12,
+    "para_lm_maximum_damping": 1000000000000.0,
+    "para_lm_relative_objective_tolerance": 1e-08,
+    "para_lm_parameter_tolerance": 1e-06,
+    "para_lm_early_stop_patience": 3,
+    "lm_starts": 5,
+    "lm_minimum_iterations": 5,
+    "lm_max_iterations": 100,
+    "lm_finite_difference_step": 0.001,
+    "lm_initial_damping": 0.01,
+    "lm_damping_increase": 10.0,
+    "lm_damping_decrease": 3.0,
+    "lm_minimum_damping": 1e-12,
+    "lm_maximum_damping": 1000000000000.0,
+    "lm_relative_objective_tolerance": 1e-08,
+    "lm_early_stop_patience": 3,
+    "de_strategy": "rand1bin",
+    "de_coordinate_system": "normalized",
+    "de_population": 30,
+    "de_generations": 99,
+    "de_maximum_candidate_evaluations": 3000,
+    "de_initialization": "latin_hypercube",
+    "de_bound_handling": "reflection",
+    "de_mutation": 0.8,
+    "de_crossover": 0.9,
+    "de_polish": false,
+    "observation_horizon": 5.0,
+    "observation_points": 51,
+    "normalize_inverse_objective": true,
+    "old_burn_horizon": 30.0,
+    "screen_horizon": 30.0,
+    "screen_output_points": 601,
+    "operator_batch_size": 256,
+    "direct_batch_size": 512,
+    "reference_step": 0.01,
+    "verification_step": 0.001,
+    "runaway_temperature_marker": 1000000.0,
+    "temperature_limit": 0.6,
+    "conversion_minimum": 0.5,
+    "temperature_std_limit": 0.025,
+    "decision_temperature_limit": 0.58,
+    "decision_conversion_minimum": 0.52,
+    "decision_temperature_std_limit": 0.02
+  },
+  "aggregate": {
+    "event_count": 20,
+    "pipelines": {
+      "Static": {
+        "unsafe_recommendation_rate": 0.4,
+        "unsafe_recommendation_count": 8,
+        "production_loss_mean": 0.49502135818225135,
+        "production_loss_median": 0.19116856120315046,
+        "production_loss_q25": 0.15599477595276517,
+        "production_loss_q75": 1.0
+      },
+      "Direct physics": {
+        "unsafe_recommendation_rate": 0.0,
+        "unsafe_recommendation_count": 0,
+        "production_loss_mean": 0.025602289765071874,
+        "production_loss_median": 0.025833562651189357,
+        "production_loss_q25": 0.023792653619488374,
+        "production_loss_q75": 0.027911530106963817,
+        "cycle_time_mean_seconds": 5.379455738933757,
+        "cycle_time_median_seconds": 5.335316020762548,
+        "cycle_time_q25_seconds": 5.306562207289971,
+        "cycle_time_q75_seconds": 5.45318257517647
+      },
+      "ParaFDEONet": {
+        "unsafe_recommendation_rate": 0.0,
+        "unsafe_recommendation_count": 0,
+        "production_loss_mean": 0.025602289765071874,
+        "production_loss_median": 0.025833562651189357,
+        "production_loss_q25": 0.023792653619488374,
+        "production_loss_q75": 0.027911530106963817,
+        "cycle_time_mean_seconds": 0.19538673909846693,
+        "cycle_time_median_seconds": 0.1868464860599488,
+        "cycle_time_q25_seconds": 0.1721333204768598,
+        "cycle_time_q75_seconds": 0.21424851834308356
+      }
+    },
+    "median_cycle_speedup": 28.554543000882216
+  },
+  "representative": {
+    "event": -1,
+    "true_parameters": [
+      1.15,
+      0.9
+    ],
+    "observation_times": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2000000000000002,
+      1.3,
+      1.4000000000000001,
+      1.5,
+      1.6,
+      1.7000000000000002,
+      1.8,
+      1.9000000000000001,
+      2.0,
+      2.1,
+      2.2,
+      2.3000000000000003,
+      2.4000000000000004,
+      2.5,
+      2.6,
+      2.7,
+      2.8000000000000003,
+      2.9000000000000004,
+      3.0,
+      3.1,
+      3.2,
+      3.3000000000000003,
+      3.4000000000000004,
+      3.5,
+      3.6,
+      3.7,
+      3.8000000000000003,
+      3.9000000000000004,
+      4.0,
+      4.1000000000000005,
+      4.2,
+      4.3,
+      4.4,
+      4.5,
+      4.6000000000000005,
+      4.7,
+      4.800000000000001,
+      4.9,
+      5.0
+    ],
+    "pipeline": {
+      "screen_time_seconds": {
+        "ParaFDEONet": 0.11223995266482234,
+        "Direct physics": 4.85365632083267,
+        "Oracle": 4.853567024692893
+      },
+      "decision_time_seconds": 0.00017530517652630806,
+      "para_screen_cache_seconds": {
+        "history_cache_seconds": 0.004127691965550184,
+        "time_trunk_cache_seconds": 0.0022667376324534416
+      },
+      "map_metrics": {
+        "para_safe_accuracy": 0.9977453190863641,
+        "para_false_safe_count": 1,
+        "para_false_safe_rate_all": 9.802960494069208e-05,
+        "direct_safe_accuracy": 0.9976472894814233,
+        "direct_false_safe_count": 1,
+        "direct_false_safe_rate_all": 9.802960494069208e-05,
+        "para_trajectory_relative_l2_mean": 0.0024012611247599125,
+        "para_trajectory_relative_l2_q95": 0.005566760897636414
+      },
+      "recommendations": {
+        "Static": {
+          "D": 1.625,
+          "Tc": 0.18000000715255737,
+          "true_maximum_temperature": 0.4384786784648895,
+          "true_conversion": 0.5760502815246582,
+          "true_temperature_std": 8.940696716308594e-08,
+          "true_safe": true,
+          "true_productivity": 0.9360817074775696,
+          "valid_productivity": 0.9360817074775696,
+          "solver_runaway": false,
+          "production_loss": 0.17708408329196446
+        },
+        "Direct physics": {
+          "D": 2.119999885559082,
+          "Tc": 0.3499999940395355,
+          "true_maximum_temperature": 0.48573732376098633,
+          "true_conversion": 0.5241659879684448,
+          "true_temperature_std": 6.774158123334928e-08,
+          "true_safe": true,
+          "true_productivity": 1.111231803894043,
+          "valid_productivity": 1.111231803894043,
+          "solver_runaway": false,
+          "production_loss": 0.023108419626389876
+        },
+        "ParaFDEONet": {
+          "D": 2.119999885559082,
+          "Tc": 0.3499999940395355,
+          "true_maximum_temperature": 0.48573732376098633,
+          "true_conversion": 0.5241659879684448,
+          "true_temperature_std": 6.774158123334928e-08,
+          "true_safe": true,
+          "true_productivity": 1.111231803894043,
+          "valid_productivity": 1.111231803894043,
+          "solver_runaway": false,
+          "production_loss": 0.023108419626389876
+        },
+        "Oracle": {
+          "D": 2.257499933242798,
+          "Tc": 0.3499999940395355,
+          "true_maximum_temperature": 0.4710928201675415,
+          "true_conversion": 0.503883957862854,
+          "true_temperature_std": 5.960464477539063e-08,
+          "true_safe": true,
+          "true_productivity": 1.137518048286438,
+          "valid_productivity": 1.137518048286438,
+          "solver_runaway": false,
+          "production_loss": 0.0
+        }
+      },
+      "inverse_method": {
+        "ParaFDEONet": "ParaFDEONet LM",
+        "Direct physics": "Direct LM"
+      },
+      "cycle_time_seconds": {
+        "ParaFDEONet": 0.22780558979138732,
+        "Direct physics": 5.320773062296212
+      }
+    },
+    "representative": true
+  }
+}

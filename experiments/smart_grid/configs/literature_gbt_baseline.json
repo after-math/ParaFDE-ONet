@@ -1,0 +1,100 @@
+{
+  "experiment_name": "out_of_fold_literature_gbt_survivability_baseline",
+  "input": {
+    "survivability_data_file": "survivability_data.npz",
+    "expected_parameter_count": 64,
+    "parameter_names": [
+      "K",
+      "gamma",
+      "alpha"
+    ],
+    "parameter_bounds": [
+      [
+        6.0,
+        10.0
+      ],
+      [
+        0.18,
+        0.32
+      ],
+      [
+        0.07,
+        0.13
+      ]
+    ],
+    "target": "direct_DDE_survivability_at_0.15_Hz_and_25_degrees",
+    "feature_preprocessing": "none_following_the_published_GBT_setup",
+    "parafdeonet_supervised_training_trajectory_count": 24576
+  },
+  "literature_baseline": {
+    "name": "Gradient Boosted Trees",
+    "short_name": "GBT",
+    "estimator": "sklearn.ensemble.GradientBoostingRegressor",
+    "configuration": "scikit-learn defaults with an explicit random_state",
+    "reference": "Nauck et al., Predicting the Fault-Ride-Through Probability of Inverter-Dominated Power Grids Using Machine Learning, IET Generation, Transmission & Distribution 20, e70264 (2026)",
+    "doi": "10.1049/gtd2.70264",
+    "public_companion": "https://zenodo.org/records/14505953",
+    "adaptation_note": "The published GBT probability-regression baseline is adapted to this fixed-topology delayed-grid survivability target; this is not a reproduction of the paper's dataset."
+  },
+  "validation": {
+    "method": "shuffled_8_fold_out_of_fold_prediction_over_parameter_combinations",
+    "fold_count": 8,
+    "primary_split_seed": 20260915,
+    "split_sensitivity_seeds": [
+      20260915,
+      20260916,
+      20260917,
+      20260918,
+      20260919
+    ],
+    "estimator_random_state": 20260915,
+    "top_risk_fractions": [
+      0.05,
+      0.1
+    ],
+    "nested_tuning": {
+      "enabled": true,
+      "inner_fold_count": 4,
+      "inner_split_seed_base": 20260915,
+      "scoring": "neg_mean_absolute_error",
+      "parallel_jobs": 8,
+      "parameter_grid": {
+        "n_estimators": [
+          100,
+          300
+        ],
+        "learning_rate": [
+          0.03,
+          0.1
+        ],
+        "max_depth": [
+          1,
+          2,
+          3
+        ],
+        "min_samples_leaf": [
+          1,
+          4,
+          8,
+          12
+        ],
+        "loss": [
+          "squared_error"
+        ]
+      }
+    }
+  },
+  "uncertainty": {
+    "paired_parameter_bootstrap_repeats": 20000,
+    "bootstrap_seed": 20260915,
+    "confidence_level": 0.95
+  },
+  "reporting": {
+    "output_subdirectory": "literature_gbt_baseline",
+    "figure_basename": "literature_gbt_comparison",
+    "figure_width_inches": 7.2,
+    "figure_height_inches": 2.55,
+    "png_dpi": 300,
+    "font_family": "Source Han Serif"
+  }
+}

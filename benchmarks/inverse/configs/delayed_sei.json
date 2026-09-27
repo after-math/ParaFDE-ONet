@@ -1,0 +1,155 @@
+{
+  "system_key": "sei",
+  "display_name": "DelayedSEI3D",
+  "source_project": "../../experiments/sei/stratified_history_balanced_sensitivity",
+  "training_resolved_config": "../../experiments/sei/stratified_history_balanced_sensitivity/configs/experiment.json",
+  "default_checkpoint": "../../artifacts/sei/with_sensitivity/methods/separate_parameter_shared/seed_20260903/best_model.pt",
+  "state_dim": 3,
+  "parameter_names": [
+    "b",
+    "a"
+  ],
+  "parameter_bounds": [
+    [
+      0.3,
+      0.7
+    ],
+    [
+      0.5,
+      2.0
+    ]
+  ],
+  "horizon": 20.0,
+  "history_sensors": 101,
+  "observation_count": 40,
+  "grid_points": [
+    41,
+    61
+  ],
+  "parameter_branch_input": "normalized",
+  "history_mode": "high75",
+  "high75_level_ranges": [
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.004,
+        0.03
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.03,
+        0.1
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.1,
+        0.15
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.1,
+        0.15
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.15,
+        0.2
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.15,
+        0.2
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.2,
+        0.25
+      ]
+    ],
+    [
+      [
+        0.72,
+        0.92
+      ],
+      [
+        0.01,
+        0.04
+      ],
+      [
+        0.2,
+        0.25
+      ]
+    ]
+  ],
+  "high75_names": [
+    "low",
+    "medium",
+    "high_lower_1",
+    "high_lower_2",
+    "high_middle_1",
+    "high_middle_2",
+    "high_upper_1",
+    "high_upper_2"
+  ]
+}

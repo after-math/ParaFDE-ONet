@@ -1,0 +1,29 @@
+{
+  "system": "sei",
+  "noise_standard_deviation": 0.005,
+  "selection_rule": "Frozen LM parameter NRMSE closest to the median",
+  "pool_median_parameter_nrmse": 0.0107475239043662,
+  "panel_index": 13,
+  "case_index": 10,
+  "history_index": 0,
+  "history_count_in_inverse_objective": 8,
+  "true_parameters": [
+    0.4880679730879087,
+    1.5741354720931906
+  ],
+  "frozen_lm_parameters": [
+    0.48880064487457275,
+    1.5515227317810059
+  ],
+  "lm_parameters": [
+    0.48840633591855565,
+    1.5603935334270516
+  ],
+  "de_parameters": [
+    0.48840901550709825,
+    1.5602955987288132
+  ],
+  "frozen_lm_parameter_nrmse": 0.0107381447412754,
+  "lm_parameter_nrmse": 0.006505568308321,
+  "de_parameter_nrmse": 0.0065519751586211
+}

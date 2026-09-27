@@ -1,0 +1,37 @@
+{
+  "experiment_name": "nicholson_patch4d_online_speed_benchmark",
+  "checkpoint_path": "",
+  "model_type": "separate_parameter_shared",
+  "case_counts": [
+    1,
+    10,
+    50,
+    100,
+    500,
+    1000,
+    2048,
+    4096
+  ],
+  "repeats": 5,
+  "warmup_iterations": 20,
+  "operator_batch_size": 512,
+  "shared_time_trunk": true,
+  "accuracy_reference_step_factor": 8,
+  "sampling_seed": 20260820,
+  "solver_chunk_size": 8,
+  "smoke": {
+    "case_counts": [
+      1,
+      10
+    ],
+    "repeats": 1,
+    "warmup_iterations": 2
+  },
+  "reporting": {
+    "figure_formats": [
+      "png",
+      "svg"
+    ],
+    "raster_dpi": 300
+  }
+}

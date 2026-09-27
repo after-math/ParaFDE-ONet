@@ -1,0 +1,222 @@
+{
+  "configuration_status": "proposal_requires_8d_implementation",
+  "experiment_name": "delayed_smart_grid4node8d_frozen_parafdeonet_inverse",
+  "forward_config": "experiment.json",
+  "checkpoint_method": "parafdeonet",
+  "checkpoint_display_name": "ParaFDEONet",
+  "methods": [
+    "frozen_parafdeonet"
+  ],
+  "case_count": 10,
+  "histories_per_case": 4,
+  "parameter_order": [
+    "coupling_K",
+    "response_gamma",
+    "damping_alpha"
+  ],
+  "parameter_bounds": [
+    [
+      6.0,
+      10.0
+    ],
+    [
+      0.18,
+      0.32
+    ],
+    [
+      0.07,
+      0.13
+    ]
+  ],
+  "truth_parameter_margin_fraction": 0.025,
+  "fixed_delay": 3.0,
+  "horizon": 12.0,
+  "randomness": {
+    "experiment_seeds": [
+      20260901,
+      20260902,
+      20260903,
+      20260904,
+      20260905
+    ],
+    "parameter_case_offset": 10,
+    "history_offset": 20,
+    "observation_offset": 30,
+    "initialization_offset": 40,
+    "collocation_offset": 50
+  },
+  "history_generator": {
+    "type": "kinematically_compatible_two_harmonic",
+    "nominal_equilibrium_coupling": 8.0,
+    "nominal_equilibrium_angles": [
+      0.0,
+      -0.1253278311680654,
+      -0.1253278311680654,
+      -0.1253278311680654
+    ],
+    "angle_offset_bounds": [
+      -0.18,
+      0.18
+    ],
+    "frequency_drift_bounds": [
+      -0.08,
+      0.08
+    ],
+    "harmonic_orders": [
+      1,
+      2
+    ],
+    "angle_harmonic_amplitude_bounds": [
+      [
+        0.015,
+        0.05
+      ],
+      [
+        0.005,
+        0.02
+      ]
+    ],
+    "phase_bounds": [
+      0.0,
+      6.283185307179586
+    ],
+    "independent_coefficients_by_node": true,
+    "gauge": "subtract_theta_1_at_t0_from_all_angle_histories",
+    "require_kinematic_identity": true
+  },
+  "truth_internal_step": 0.00125,
+  "noise_space": "training_standardized_observation_channels",
+  "parameter_error_thresholds": [
+    0.05,
+    0.02,
+    0.01
+  ],
+  "primary_identification": {
+    "display_name": "Frozen ParaFDEONet with four shared-parameter histories and generator-frequency observations",
+    "history_count": 4,
+    "observation_count_per_history": 40,
+    "observation_time_interval": [
+      0.3,
+      12.0
+    ],
+    "observation_channels": [
+      "omega_1"
+    ],
+    "noise_standard_deviations": [
+      0.0025,
+      0.005,
+      0.01,
+      0.02
+    ]
+  },
+  "history_count_ablation": {
+    "display_name": "Frozen ParaFDEONet shared-parameter history-count ablation",
+    "noise_standard_deviation": 0.01,
+    "observation_count_per_history": 40,
+    "observation_time_interval": [
+      0.3,
+      12.0
+    ],
+    "observation_channels": [
+      "omega_1"
+    ],
+    "conditions": {
+      "one_history": 1,
+      "two_histories": 2,
+      "four_histories": 4
+    }
+  },
+  "observation_ablation": {
+    "display_name": "Frozen ParaFDEONet observation-channel ablation",
+    "history_count": 4,
+    "noise_standard_deviation": 0.01,
+    "observation_count_per_history": 40,
+    "observation_time_interval": [
+      0.3,
+      12.0
+    ],
+    "modes": {
+      "generator_frequency": [
+        "omega_1"
+      ],
+      "all_frequencies": [
+        "omega_1",
+        "omega_2",
+        "omega_3",
+        "omega_4"
+      ],
+      "gauge_independent_full_state": [
+        "theta_2_minus_theta_1",
+        "theta_3_minus_theta_1",
+        "theta_4_minus_theta_1",
+        "omega_1",
+        "omega_2",
+        "omega_3",
+        "omega_4"
+      ]
+    }
+  },
+  "identifiability_diagnostics": {
+    "normalized_parameter_jacobian": true,
+    "parameter_scaling": "interval_width",
+    "report_singular_values": true,
+    "report_condition_number": true,
+    "report_pairwise_column_correlations": true,
+    "warning_condition_number": 100.0,
+    "warning_minimum_relative_singular_value": 0.001,
+    "do_not_filter_cases_by_diagnostic": true
+  },
+  "frozen_parafdeonet": {
+    "reuse_history_features": true,
+    "reuse_time_trunk_features": true,
+    "initial_candidate_count": 4096,
+    "candidate_design": "scrambled_sobol",
+    "candidate_evaluation_batch_size": 256,
+    "selected_starts": 10,
+    "adam_steps": 2500,
+    "parameter_learning_rate": 0.01,
+    "minimum_learning_rate": 1e-05,
+    "collocation_points": 128,
+    "physics_weight": 0.01,
+    "lbfgsb_max_iterations": 100,
+    "lbfgsb_history_size": 20,
+    "lbfgsb_ftol": 1e-12,
+    "lbfgsb_gtol": 1e-08,
+    "checkpoint_interval": 100,
+    "record_interval": 20
+  },
+  "post_identification_verification": {
+    "reference_solver": "causal_rk4",
+    "internal_step": 0.00125,
+    "verify_all_histories": true,
+    "report_observed_channel_reconstruction": true,
+    "report_full_state_reconstruction": true
+  },
+  "maximum_seconds_per_job": 21600,
+  "smoke": {
+    "case_count": 1,
+    "histories_per_case": 2,
+    "observation_count_per_history": 8,
+    "initial_candidate_count": 32,
+    "candidate_evaluation_batch_size": 8,
+    "selected_starts": 2,
+    "adam_steps": 3,
+    "lbfgsb_max_iterations": 2,
+    "collocation_points": 4
+  },
+  "reporting": {
+    "figure_formats": [
+      "png",
+      "svg"
+    ],
+    "raster_dpi": 300,
+    "report_physical_parameter_errors": true,
+    "report_interval_normalized_parameter_errors": true,
+    "report_reconstruction_errors": true,
+    "report_runtime": true
+  },
+  "ntfy": {
+    "enabled": false,
+    "topic": ""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "case_index": 891,
+  "training_seed": 20260901,
+  "test_case_count": 2048,
+  "transmission_b": 0.362761914730072,
+  "convexity_a": 1.4165796041488647,
+  "history_stratum": "medium",
+  "relative_l2": 8.928564395103821e-05,
+  "selection_rule": "minimum test-set trajectory relative L2 error",
+  "best_iteration": 59000,
+  "checkpoint_device": "cpu",
+  "mse": 1.7627300601297266e-09
+}

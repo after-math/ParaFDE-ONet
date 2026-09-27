@@ -1,0 +1,35 @@
+{
+  "experiment_name": "five_seed_parafdeonet_survivability",
+  "expected_training_seeds": [
+    20261001,
+    20261002,
+    20261003,
+    20261004,
+    20261005
+  ],
+  "expected_parameter_count": 75223048,
+  "reference_application_relative_to_run": "full/application_survivability",
+  "dataset_relative_to_run": "full/dataset/test.npz",
+  "checkpoint_glob_relative_to_run": "full/methods/parafdeonet/seed_*/best_model.pt",
+  "history_count": 512,
+  "parameter_count": 64,
+  "trajectory_count": 32768,
+  "representative_frequency_threshold_hz": 0.15,
+  "representative_edge_angle_threshold_degrees": 25.0,
+  "top_risk_fractions": [
+    0.05,
+    0.1
+  ],
+  "operator_history_batch_size": 32,
+  "operator_parameter_batch_size": 64,
+  "timing_repeats": 5,
+  "bootstrap": {
+    "repeats": 20000,
+    "seed": 20260916,
+    "confidence_level": 0.95,
+    "resampling_units": [
+      "training_seed",
+      "parameter_combination"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "system_key": "v2d",
+  "display_name": "VariableDelayCompetition2D",
+  "source_project": "../../experiments/competition/four_methods_sensitivity_5seeds",
+  "training_resolved_config": "../../experiments/competition/four_methods_sensitivity_5seeds/configs/experiment.json",
+  "default_checkpoint": "../../artifacts/competition/with_sensitivity/methods/separate_parameter_shared/seed_20261005/best_model.pt",
+  "state_dim": 2,
+  "parameter_names": [
+    "r1",
+    "r2"
+  ],
+  "parameter_bounds": [
+    [
+      0.8,
+      1.4
+    ],
+    [
+      0.8,
+      1.4
+    ]
+  ],
+  "horizon": 10.0,
+  "history_sensors": 101,
+  "observation_count": 20,
+  "grid_points": [
+    41,
+    41
+  ],
+  "parameter_branch_input": "physical",
+  "history_mode": "training_distribution"
+}

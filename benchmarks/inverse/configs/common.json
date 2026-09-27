@@ -1,0 +1,129 @@
+{
+  "protocol_version": "three_system_panel_inverse_v1",
+  "methods": [
+    "frozen",
+    "lm",
+    "de"
+  ],
+  "formal": {
+    "panel_count": 20,
+    "histories_per_panel": 8,
+    "cases_per_panel": 50,
+    "noise_standard_deviations": [
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ]
+  },
+  "pilot": {
+    "panel_count": 1,
+    "histories_per_panel": 8,
+    "cases_per_panel": 100,
+    "noise_standard_deviations": [
+      0.01
+    ],
+    "cache_parameter_validation_cases": 5
+  },
+  "smoke": {
+    "panel_count": 1,
+    "histories_per_panel": 2,
+    "cases_per_panel": 2,
+    "noise_standard_deviations": [
+      0.01
+    ],
+    "observation_count": 4,
+    "truth_internal_step": 0.01,
+    "grid_points": [
+      5,
+      5
+    ],
+    "top_k": 2,
+    "adam_min_steps": 2,
+    "adam_max_steps": 3,
+    "adam_check_interval": 1,
+    "adam_patience": 1,
+    "lm_starts": 2,
+    "lm_min_iterations": 1,
+    "lm_max_iterations": 2,
+    "lm_patience": 1,
+    "de_population_size": 6,
+    "de_maximum_generations": 2,
+    "cache_parameter_validation_cases": 1
+  },
+  "parameter_design": {
+    "interior_count": 40,
+    "edge_count": 10,
+    "maximin_candidates": 256,
+    "interior_margin": 0.05,
+    "edge_margin": 0.02,
+    "seed": 20261101
+  },
+  "data": {
+    "truth_internal_step": 0.0025,
+    "output_points": 401,
+    "seed": 20261111,
+    "noise_seed": 20261121
+  },
+  "frozen": {
+    "top_k": 10,
+    "grid_batch_size": 256,
+    "adam_min_steps": 100,
+    "adam_max_steps": 500,
+    "adam_check_interval": 20,
+    "adam_parameter_tolerance": 1e-05,
+    "adam_relative_objective_tolerance": 1e-07,
+    "adam_patience": 5,
+    "learning_rate": 0.01,
+    "minimum_learning_rate": 1e-05,
+    "physics_weight": 0.0,
+    "use_lbfgsb": false
+  },
+  "lm": {
+    "starts": 5,
+    "finite_difference_step": 0.001,
+    "internal_step": 0.01,
+    "initial_damping": 0.01,
+    "damping_increase": 10.0,
+    "damping_decrease": 3.0,
+    "minimum_damping": 1e-12,
+    "maximum_damping": 1000000000000.0,
+    "min_iterations": 5,
+    "max_iterations": 100,
+    "relative_objective_tolerance": 1e-08,
+    "patience": 3
+  },
+  "de": {
+    "strategy": "rand1bin",
+    "coordinate_system": "normalized",
+    "population_size": 30,
+    "mutation": 0.8,
+    "recombination": 0.9,
+    "initialization": "latin_hypercube",
+    "bound_handling": "reflection",
+    "maximum_generations": 99,
+    "maximum_candidate_evaluations": 3000,
+    "internal_step": 0.01,
+    "polish": false
+  },
+  "reporting": {
+    "parameter_error_thresholds": [
+      0.01,
+      0.02,
+      0.05
+    ],
+    "boundary_tolerance_normalized": 0.0001,
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20261131,
+    "noninferiority_margin_relative": 0.05,
+    "amortization_k": [
+      1,
+      5,
+      10,
+      25,
+      50,
+      100,
+      200
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "experiment_name": "three_systems_sensitivity_jacobian_benchmark",
+  "selection_seed": 20260826,
+  "bootstrap_seed": 20260827,
+  "bootstrap_repeats": 2000,
+  "gradient_case_count": 64,
+  "gradient_parameter_offset_fraction": 0.1,
+  "gradient_observation_count": 20,
+  "relative_error_epsilon": 1e-12,
+  "convergence_warning_threshold": 0.01,
+  "systems": {
+    "competition": {
+      "display_name": "Variable-delay competition",
+      "primary_code_dir": "experiments/competition/four_methods_sensitivity_5seeds/code",
+      "baseline_code_dir": "experiments/competition/four_methods_normalized_no_sensitivity_5seeds/code",
+      "resolved_config": "artifacts/competition/with_sensitivity/resolved_config.json",
+      "test_dataset": "artifacts/competition/with_sensitivity/dataset/test.npz",
+      "checkpoints": {
+        "without_sensitivity": "artifacts/competition/without_sensitivity/methods/separate_parameter_shared/seed_20261005/best_model.pt",
+        "with_sensitivity": "artifacts/competition/with_sensitivity/methods/separate_parameter_shared/seed_20261005/best_model.pt"
+      },
+      "training_seed": 20261005,
+      "parameter_names": [
+        "r1",
+        "r2"
+      ],
+      "parameter_bounds": [
+        [
+          0.8,
+          1.4
+        ],
+        [
+          0.8,
+          1.4
+        ]
+      ],
+      "finite_difference_levels": [
+        [
+          0.005,
+          0.0025,
+          0.00125
+        ],
+        [
+          0.005,
+          0.0025,
+          0.00125
+        ]
+      ],
+      "solver_step_levels": [
+        [
+          0.01,
+          0.005,
+          0.0025
+        ],
+        [
+          0.01,
+          0.005,
+          0.0025
+        ]
+      ],
+      "case_count": 512,
+      "convergence_case_count": 64,
+      "gradient_case_count": 64,
+      "reference_chunk_size": 16,
+      "balanced_strata": false
+    },
+    "sei": {
+      "display_name": "Delayed SEI",
+      "primary_code_dir": "experiments/sei/stratified_history_balanced_sensitivity/code",
+      "baseline_code_dir": "experiments/sei/stratified_history_balanced_normalized_no_sensitivity/code",
+      "resolved_config": "artifacts/sei/with_sensitivity/resolved_config.json",
+      "test_dataset": "artifacts/sei/with_sensitivity/dataset/test.npz",
+      "checkpoints": {
+        "without_sensitivity": "artifacts/sei/without_sensitivity/methods/separate_parameter_shared/seed_20260903/best_model.pt",
+        "with_sensitivity": "artifacts/sei/with_sensitivity/methods/separate_parameter_shared/seed_20260903/best_model.pt"
+      },
+      "training_seed": 20260903,
+      "parameter_names": [
+        "b",
+        "a"
+      ],
+      "parameter_bounds": [
+        [
+          0.3,
+          0.7
+        ],
+        [
+          0.5,
+          2.0
+        ]
+      ],
+      "finite_difference_levels": [
+        [
+          0.005,
+          0.0025,
+          0.00125
+        ],
+        [
+          0.02,
+          0.01,
+          0.005
+        ]
+      ],
+      "solver_step_levels": [
+        [
+          0.01,
+          0.005,
+          0.0025
+        ],
+        [
+          0.01,
+          0.005,
+          0.0025
+        ]
+      ],
+      "case_count": 510,
+      "convergence_case_count": 63,
+      "gradient_case_count": 63,
+      "reference_chunk_size": 8,
+      "balanced_strata": true,
+      "strata_key": "history_strata"
+    },
+    "nicholson": {
+      "display_name": "Four-patch Nicholson",
+      "primary_code_dir": "experiments/nicholson/four_methods_normalized_sensitivity_5seeds/code",
+      "baseline_code_dir": "experiments/nicholson/code",
+      "resolved_config": "artifacts/nicholson/with_sensitivity/resolved_config.json",
+      "test_dataset": "artifacts/nicholson/with_sensitivity/dataset/test.npz",
+      "checkpoints": {
+        "without_sensitivity": "artifacts/nicholson/without_sensitivity/methods/separate_parameter_shared/seed_20260901/best_model.pt",
+        "with_sensitivity": "artifacts/nicholson/with_sensitivity/methods/separate_parameter_shared/seed_20260901/best_model.pt"
+      },
+      "training_seed": 20260901,
+      "parameter_names": [
+        "beta",
+        "tau0"
+      ],
+      "parameter_bounds": [
+        [
+          3.0,
+          7.0
+        ],
+        [
+          0.8,
+          1.4
+        ]
+      ],
+      "finite_difference_levels": [
+        [
+          0.02,
+          0.01,
+          0.005
+        ],
+        [
+          0.005,
+          0.0025,
+          0.00125
+        ]
+      ],
+      "solver_step_levels": [
+        [
+          0.01,
+          0.005,
+          0.0025
+        ],
+        [
+          0.01,
+          0.005,
+          0.0025,
+          0.00125
+        ]
+      ],
+      "case_count": 512,
+      "convergence_case_count": 64,
+      "gradient_case_count": 64,
+      "reference_chunk_size": 4,
+      "balanced_strata": false
+    }
+  }
+}

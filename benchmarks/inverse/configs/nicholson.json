@@ -1,0 +1,31 @@
+{
+  "system_key": "n4d",
+  "display_name": "NicholsonPatch4D",
+  "source_project": "../../experiments/nicholson/four_methods_normalized_sensitivity_5seeds",
+  "training_resolved_config": "../../experiments/nicholson/four_methods_normalized_sensitivity_5seeds/configs/experiment.json",
+  "default_checkpoint": "../../artifacts/nicholson/with_sensitivity/methods/separate_parameter_shared/seed_20260901/best_model.pt",
+  "state_dim": 4,
+  "parameter_names": [
+    "beta",
+    "tau0"
+  ],
+  "parameter_bounds": [
+    [
+      3.0,
+      7.0
+    ],
+    [
+      0.8,
+      1.4
+    ]
+  ],
+  "horizon": 15.0,
+  "history_sensors": 101,
+  "observation_count": 20,
+  "grid_points": [
+    41,
+    61
+  ],
+  "parameter_branch_input": "normalized",
+  "history_mode": "training_distribution"
+}

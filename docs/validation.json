@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-27",
+  "python": "3.12.7",
+  "platform": "macOS",
+  "device": "cpu",
+  "unit_tests_passed": 97,
+  "forward_smoke": {
+    "competition": "success",
+    "sei": "success",
+    "nicholson": "success",
+    "smart_grid": "success",
+    "cstr": {
+      "execution": "completed",
+      "formal_accuracy_gate": false,
+      "iterations": 3
+    }
+  },
+  "inverse_smoke": {
+    "system": "competition",
+    "methods": [
+      "DDE-LM",
+      "DDE-DE"
+    ],
+    "status": "completed"
+  },
+  "advanced_entrypoints_checked": 14,
+  "figures_generated": 7,
+  "cstr_archive": {
+    "inversion_records": 252,
+    "event_records": 20,
+    "status": "verified"
+  },
+  "grid_gbt_primary_maximum_prediction_difference": 0.0,
+  "full_gpu_training_rerun": false,
+  "full_gpu_timing_rerun": false
+}

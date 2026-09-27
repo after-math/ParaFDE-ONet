@@ -1,0 +1,5 @@
+system,variant,metric,median,q25,q75,mean,fraction_positive,case_count,training_seed_count
+nicholson,without_sensitivity,jacobian_only_gradient_cosine,0.9999999390660932,0.9999997762572219,0.9999999822829545,0.9999998056111359,1.0,64,1
+nicholson,without_sensitivity,end_to_end_gradient_cosine,0.9999999329936262,0.9999997880927953,0.9999999885603499,0.999999819892495,1.0,64,1
+nicholson,with_sensitivity,jacobian_only_gradient_cosine,0.9999999730222133,0.9999999096332038,0.9999999934619553,0.999999914235941,1.0,64,1
+nicholson,with_sensitivity,end_to_end_gradient_cosine,0.9999999719779102,0.9999999258408202,0.999999992256358,0.999999906424357,1.0,64,1

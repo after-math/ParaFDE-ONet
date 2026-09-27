@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying ParaFDEONet manuscript when using this research code."
+type: software
+title: "ParaFDEONet: A Unified Framework for Forward Prediction and Parameter Identification in Parameterized Functional Differential Equations"
+authors:
+  - family-names: Cheng
+    given-names: Jiaming
+  - family-names: Jiang
+    given-names: Yuqing
+  - family-names: Xiao
+    given-names: Aiguo
+  - family-names: Yan
+    given-names: Xiaoqiang
+  - family-names: Xiang
+    given-names: Peiming
+repository-code: "https://github.com/after-math/ParaFDE-ONet"
+keywords:
+  - functional differential equations
+  - delay differential equations
+  - operator learning
+  - parameter identification

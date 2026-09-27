@@ -1,0 +1,16 @@
+{
+  "optimizer": "projected_damped_gauss_newton_exact_jvp",
+  "top_k": 10,
+  "grid_batch_size": 256,
+  "lm_starts": 10,
+  "lm_min_iterations": 3,
+  "lm_max_iterations": 20,
+  "lm_initial_damping": 0.01,
+  "lm_damping_increase": 10.0,
+  "lm_damping_decrease": 3.0,
+  "lm_minimum_damping": 1e-12,
+  "lm_maximum_damping": 1000000000000.0,
+  "lm_relative_objective_tolerance": 1e-08,
+  "lm_parameter_tolerance": 1e-06,
+  "lm_early_stop_patience": 3
+}

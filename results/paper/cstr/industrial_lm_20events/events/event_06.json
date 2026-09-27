@@ -1,0 +1,141 @@
+{
+  "event": 6,
+  "true_parameters": [
+    1.1554497853204133,
+    1.20336239620548
+  ],
+  "observation_times": [
+    0.0,
+    0.1,
+    0.2,
+    0.30000000000000004,
+    0.4,
+    0.5,
+    0.6000000000000001,
+    0.7000000000000001,
+    0.8,
+    0.9,
+    1.0,
+    1.1,
+    1.2000000000000002,
+    1.3,
+    1.4000000000000001,
+    1.5,
+    1.6,
+    1.7000000000000002,
+    1.8,
+    1.9000000000000001,
+    2.0,
+    2.1,
+    2.2,
+    2.3000000000000003,
+    2.4000000000000004,
+    2.5,
+    2.6,
+    2.7,
+    2.8000000000000003,
+    2.9000000000000004,
+    3.0,
+    3.1,
+    3.2,
+    3.3000000000000003,
+    3.4000000000000004,
+    3.5,
+    3.6,
+    3.7,
+    3.8000000000000003,
+    3.9000000000000004,
+    4.0,
+    4.1000000000000005,
+    4.2,
+    4.3,
+    4.4,
+    4.5,
+    4.6000000000000005,
+    4.7,
+    4.800000000000001,
+    4.9,
+    5.0
+  ],
+  "pipeline": {
+    "screen_time_seconds": {
+      "ParaFDEONet": 0.1066235275939107,
+      "Direct physics": 4.864536053966731,
+      "Oracle": 4.857652258127928
+    },
+    "decision_time_seconds": 0.00018382491543889046,
+    "para_screen_cache_seconds": {
+      "history_cache_seconds": 0.0033981180749833584,
+      "time_trunk_cache_seconds": 0.0017448058351874352
+    },
+    "map_metrics": {
+      "para_safe_accuracy": 0.9998039407901186,
+      "para_false_safe_count": 1,
+      "para_false_safe_rate_all": 9.802960494069208e-05,
+      "direct_safe_accuracy": 0.9998039407901186,
+      "direct_false_safe_count": 0,
+      "direct_false_safe_rate_all": 0.0,
+      "para_trajectory_relative_l2_mean": 0.0006367889582179487,
+      "para_trajectory_relative_l2_q95": 0.0016380916349589825
+    },
+    "recommendations": {
+      "Static": {
+        "D": 1.625,
+        "Tc": 0.18000000715255737,
+        "true_maximum_temperature": 0.4035376310348511,
+        "true_conversion": 0.5647809505462646,
+        "true_temperature_std": 8.138953830894025e-07,
+        "true_safe": true,
+        "true_productivity": 0.91776904463768,
+        "valid_productivity": 0.91776904463768,
+        "solver_runaway": false,
+        "production_loss": 0.18798941121463686
+      },
+      "Direct physics": {
+        "D": 2.119999885559082,
+        "Tc": 0.3499999940395355,
+        "true_maximum_temperature": 0.48774266242980957,
+        "true_conversion": 0.5202287435531616,
+        "true_temperature_std": 6.960666496524937e-07,
+        "true_safe": true,
+        "true_productivity": 1.1028848886489868,
+        "valid_productivity": 1.1028848886489868,
+        "solver_runaway": false,
+        "production_loss": 0.024205258363346305
+      },
+      "ParaFDEONet": {
+        "D": 2.119999885559082,
+        "Tc": 0.3499999940395355,
+        "true_maximum_temperature": 0.48774266242980957,
+        "true_conversion": 0.5202287435531616,
+        "true_temperature_std": 6.960666496524937e-07,
+        "true_safe": true,
+        "true_productivity": 1.1028848886489868,
+        "valid_productivity": 1.1028848886489868,
+        "solver_runaway": false,
+        "production_loss": 0.024205258363346305
+      },
+      "Oracle": {
+        "D": 2.257499933242798,
+        "Tc": 0.3499999940395355,
+        "true_maximum_temperature": 0.4721766412258148,
+        "true_conversion": 0.5006612539291382,
+        "true_temperature_std": 3.2054242637968855e-07,
+        "true_safe": true,
+        "true_productivity": 1.1302427053451538,
+        "valid_productivity": 1.1302427053451538,
+        "solver_runaway": false,
+        "production_loss": 0.0
+      }
+    },
+    "inverse_method": {
+      "ParaFDEONet": "ParaFDEONet LM",
+      "Direct physics": "Direct LM"
+    },
+    "cycle_time_seconds": {
+      "ParaFDEONet": 0.22406160784885287,
+      "Direct physics": 5.320023742970079
+    }
+  },
+  "representative": false
+}

@@ -1,0 +1,11 @@
+{
+  "case_index": 447,
+  "training_seed": 20260903,
+  "test_case_count": 2048,
+  "transmission_b": 0.5508455634117126,
+  "convexity_a": 1.010011911392212,
+  "history_stratum": "low",
+  "relative_l2": 0.0004796126785036031,
+  "test_set_median_relative_l2": 0.0004796272717568,
+  "mse": 4.84983234864336e-08
+}

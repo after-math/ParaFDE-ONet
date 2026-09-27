@@ -1,0 +1,59 @@
+{
+  "experiment_name": "parafdeonet_accelerated_probabilistic_survivability",
+  "frozen_model": {
+    "checkpoint_relative_to_run": "full/methods/parafdeonet/seed_20261001/best_model.pt",
+    "expected_parameter_count": 75223048,
+    "expected_training_seed": 20261001,
+    "expected_best_iteration": 76500
+  },
+  "baseline": {
+    "name": "Direct DDE Monte Carlo survivability",
+    "method_reference": "Hellmann et al., Survivability of deterministic dynamical systems, Scientific Reports 6, 29654 (2016)",
+    "doi": "10.1038/srep29654",
+    "implementation": "causal fixed-step method-of-steps RK4",
+    "internal_step_seconds": 0.005,
+    "refined_audit_step_seconds": 0.0025,
+    "refined_audit_case_count": 256
+  },
+  "design": {
+    "dataset_relative_to_run": "full/dataset/test.npz",
+    "history_count": 512,
+    "history_selection": "evenly_spaced_indices_from_the_fixed_2048_case_test_split",
+    "parameter_levels_per_dimension": 4,
+    "parameter_design": "full_factorial_over_K_gamma_alpha_bounds",
+    "trajectory_count": 32768,
+    "horizon_seconds": 12.0,
+    "output_points": 401
+  },
+  "survivability": {
+    "definition": "fraction_of_histories_whose_entire_trajectory_satisfies_both_bounds",
+    "frequency_threshold_hz_min": 0.04,
+    "frequency_threshold_hz_max": 0.3,
+    "frequency_threshold_hz_step": 0.01,
+    "edge_angle_threshold_degrees_min": 10.0,
+    "edge_angle_threshold_degrees_max": 45.0,
+    "edge_angle_threshold_degrees_step": 1.0,
+    "representative_frequency_threshold_hz": 0.15,
+    "representative_edge_angle_threshold_degrees": 25.0,
+    "frequency_risk": "maximum_absolute_nodal_frequency_over_time_and_nodes",
+    "angle_risk": "maximum_absolute_phase_difference_over_time_and_star_edges"
+  },
+  "runtime": {
+    "device": "cuda:0",
+    "operator_history_batch_size": 32,
+    "operator_parameter_batch_size": 64,
+    "direct_processes": 64,
+    "direct_chunk_size": 64,
+    "timing_warmup_runs": 1,
+    "timing_repeats": 5,
+    "exclude_model_and_dataset_loading_from_timing": true
+  },
+  "reporting": {
+    "figure_basename": "survivability_main",
+    "figure_width_inches": 7.2,
+    "figure_height_inches": 6.25,
+    "png_dpi": 300,
+    "tiff_dpi": 600,
+    "font_family": "DejaVu Serif"
+  }
+}

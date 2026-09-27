@@ -1,0 +1,36 @@
+{
+  "parameter_count": 43755010,
+  "best_iteration": 39000,
+  "best_validation_mse": 7.082118990244708e-08,
+  "elapsed_seconds_this_run": 10299.29383440828,
+  "validation": {
+    "mse": 7.082118990244708e-08,
+    "relative_l2_mean": 0.0005679647297723353,
+    "relative_l2_median": 0.0003807503327598508,
+    "c_mse": 4.559070672983611e-08,
+    "T_mse": 9.605167307505804e-08,
+    "c_relative_l2_mean": 0.00044032511395693794,
+    "T_relative_l2_mean": 0.0015937425746129505,
+    "zero_predictor_mse": 0.1728519316992749,
+    "zero_predictor_improvement": 0.999999590278285
+  },
+  "test": {
+    "mse": 6.649764682226004e-08,
+    "relative_l2_mean": 0.0005636974819676197,
+    "relative_l2_median": 0.0003701278264192756,
+    "c_mse": 4.4334750949425366e-08,
+    "T_mse": 8.866054269509469e-08,
+    "c_relative_l2_mean": 0.00044154941753923985,
+    "T_relative_l2_mean": 0.0015134834653046597,
+    "zero_predictor_mse": 0.17254933062906022,
+    "zero_predictor_improvement": 0.9999996146166051
+  },
+  "checks": {
+    "validation_relative_l2": true,
+    "test_relative_l2": true,
+    "test_temperature_relative_l2": true,
+    "zero_predictor_improvement": true
+  },
+  "passed": true,
+  "device": "cuda:0"
+}

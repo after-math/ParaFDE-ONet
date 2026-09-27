@@ -1,0 +1,143 @@
+{
+  "experiment_name": "variable_delay_competition2d_4methods_5seeds",
+  "methods": [
+    "single_branch_deeponet",
+    "two_branch_mionet",
+    "separate_parameter_shared",
+    "separate_parameter_state_specific"
+  ],
+  "method_display_names": {
+    "single_branch_deeponet": "Single-Branch DeepONet",
+    "two_branch_mionet": "Two-Branch MIONet",
+    "separate_parameter_shared": "Separate-Parameter MIONet",
+    "separate_parameter_state_specific": "Separate Parameter (State-Specific 2p)"
+  },
+  "randomness": {
+    "data_seed": 20260818,
+    "training_seeds": [
+      20261001,
+      20261002,
+      20261003,
+      20261004,
+      20261005
+    ]
+  },
+  "data": {
+    "history_count": 4096,
+    "parameter_count": 1024,
+    "pairs_per_history": 6,
+    "validation_count": 2048,
+    "test_count": 2048,
+    "history_sensors": 101,
+    "history_mean": [
+      0.58,
+      0.6
+    ],
+    "history_sigma": 0.08,
+    "history_length_scale": 0.35,
+    "history_bounds": [
+      0.2,
+      1.2
+    ],
+    "horizon": 10.0,
+    "output_points": 401,
+    "internal_step": 0.01,
+    "solver_chunk_size": 64
+  },
+  "equation": {
+    "maximum_history": 1.0,
+    "parameter_bounds": [
+      [
+        0.8,
+        1.4
+      ],
+      [
+        0.8,
+        1.4
+      ]
+    ],
+    "carrying_capacities": [
+      1.0,
+      1.0
+    ],
+    "competition_coefficients": [
+      0.35,
+      0.3
+    ],
+    "delay_mean": 0.8,
+    "delay_amplitude": 0.2,
+    "delay_angular_frequency": 1.2566370614359172
+  },
+  "operator": {
+    "activation": "gelu",
+    "latent_dim": 384,
+    "history_width": 640,
+    "history_depth": 5,
+    "parameter_width": 512,
+    "parameter_depth": 7,
+    "trunk_width": 512,
+    "trunk_depth": 5,
+    "fourier_modes": 12,
+    "iterations": 40000,
+    "data_pretrain_iterations": 10000,
+    "physics_ramp_iterations": 8000,
+    "supervised_pair_batch": 48,
+    "physics_pool_batch": 4,
+    "residual_points": 16,
+    "data_weight": 1.0,
+    "initial_weight": 8.0,
+    "physics_weight": 0.030930829752220772,
+    "learning_rate": 0.000780948239276257,
+    "warmup_learning_rate": 5e-06,
+    "minimum_learning_rate": 1e-06,
+    "warmup_iterations": 1500,
+    "weight_decay": 2.5317533882746092e-05,
+    "gradient_clip": 1.0,
+    "steps_per_epoch": 500,
+    "validation_every": 500,
+    "evaluation_batch_size": 128,
+    "physics_pairing_mode": "online_cartesian"
+  },
+  "reporting": {
+    "figure_formats": [
+      "png",
+      "svg"
+    ],
+    "raster_dpi": 300,
+    "representative_forward_case": 320
+  },
+  "smoke": {
+    "history_count": 8,
+    "parameter_count": 8,
+    "pairs_per_history": 3,
+    "validation_count": 4,
+    "test_count": 4,
+    "history_sensors": 21,
+    "horizon": 1.0,
+    "output_points": 21,
+    "internal_step": 0.01,
+    "operator_iterations": 3,
+    "operator_latent_dim": 16,
+    "operator_width": 24,
+    "operator_depth": 2,
+    "fourier_modes": 2,
+    "supervised_pair_batch": 2,
+    "physics_pool_batch": 2,
+    "residual_points": 3
+  },
+  "wandb": {
+    "enabled": false,
+    "mode": "disabled",
+    "project": "variable-delay-competition2d-forward",
+    "entity": null,
+    "run_name": null,
+    "log_gradients": true,
+    "gradient_interval_epochs": 1,
+    "upload_artifacts": false,
+    "sync_after_success": false
+  },
+  "ntfy": {
+    "enabled": false,
+    "topic": ""
+  }
+}

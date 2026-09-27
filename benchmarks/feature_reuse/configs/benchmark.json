@@ -1,0 +1,65 @@
+{
+  "experiment_name": "nicholson_feature_reuse_benchmark",
+  "source_project_name": "../experiments/nicholson",
+  "source_experiment": "four_methods_normalized_sensitivity_5seeds",
+  "source_run": "normalized_sensitivity_4methods_20260819_122243",
+  "training_seed": 20260905,
+  "methods": {
+    "single_branch_deeponet": "JI-DeepONet",
+    "four_branch_mionet": "RP-MIONet",
+    "separate_parameter_shared": "PFDEONet"
+  },
+  "panel": {
+    "history_count": 8,
+    "observation_count": 20,
+    "observed_states": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "history_seed": 20261021,
+    "true_parameter_seed": 20261022,
+    "noise_seed": 20261023,
+    "noise_standard_deviation": 0.02
+  },
+  "queries": {
+    "counts": [
+      1,
+      10,
+      100,
+      1000,
+      3000,
+      10000,
+      100000
+    ],
+    "parameter_seed": 20261024
+  },
+  "timing": {
+    "warmup_queries": 10,
+    "repeats": 10,
+    "dtype": "float32",
+    "require_cuda": true,
+    "require_same_training_seed": true,
+    "measurement_order_seed": 20261025
+  },
+  "smoke": {
+    "history_count": 2,
+    "observation_count": 5,
+    "query_counts": [
+      1,
+      2
+    ],
+    "warmup_queries": 1,
+    "repeats": 2
+  },
+  "reporting": {
+    "figure_formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "raster_dpi": 300
+  },
+  "checkpoint_root": "artifacts/nicholson/with_sensitivity/methods"
+}

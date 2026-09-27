@@ -1,0 +1,89 @@
+{
+  "competition": {
+    "system": "competition",
+    "noise_standard_deviation": 0.005,
+    "selection_rule": "Frozen LM parameter NRMSE closest to the median",
+    "pool_median_parameter_nrmse": 0.00769811315416545,
+    "panel_index": 5,
+    "case_index": 36,
+    "history_index": 0,
+    "history_count_in_inverse_objective": 1,
+    "true_parameters": [
+      1.3032070870186117,
+      1.3331324858747355
+    ],
+    "frozen_lm_parameters": [
+      1.3088237047195435,
+      1.3364511728286743
+    ],
+    "lm_parameters": [
+      1.308094158919889,
+      1.3372372435795343
+    ],
+    "de_parameters": [
+      1.3080662491431758,
+      1.3372571311085855
+    ],
+    "frozen_lm_parameter_nrmse": 0.0076883820629158,
+    "lm_parameter_nrmse": 0.007521497669953,
+    "de_parameter_nrmse": 0.0075114870233973
+  },
+  "sei": {
+    "system": "sei",
+    "noise_standard_deviation": 0.005,
+    "selection_rule": "Frozen LM parameter NRMSE closest to the median",
+    "pool_median_parameter_nrmse": 0.0107475239043662,
+    "panel_index": 13,
+    "case_index": 10,
+    "history_index": 0,
+    "history_count_in_inverse_objective": 8,
+    "true_parameters": [
+      0.4880679730879087,
+      1.5741354720931906
+    ],
+    "frozen_lm_parameters": [
+      0.48880064487457275,
+      1.5515227317810059
+    ],
+    "lm_parameters": [
+      0.48840633591855565,
+      1.5603935334270516
+    ],
+    "de_parameters": [
+      0.48840901550709825,
+      1.5602955987288132
+    ],
+    "frozen_lm_parameter_nrmse": 0.0107381447412754,
+    "lm_parameter_nrmse": 0.006505568308321,
+    "de_parameter_nrmse": 0.0065519751586211
+  },
+  "nicholson": {
+    "system": "nicholson",
+    "noise_standard_deviation": 0.005,
+    "selection_rule": "Frozen LM parameter NRMSE closest to the median",
+    "pool_median_parameter_nrmse": 0.014145170446996199,
+    "panel_index": 18,
+    "case_index": 46,
+    "history_index": 0,
+    "history_count_in_inverse_objective": 1,
+    "true_parameters": [
+      5.0,
+      1.388
+    ],
+    "frozen_lm_parameters": [
+      4.998380661010742,
+      1.399999976158142
+    ],
+    "lm_parameters": [
+      4.998328199106236,
+      1.4
+    ],
+    "de_parameters": [
+      4.998464249893147,
+      1.3999999343222296
+    ],
+    "frozen_lm_parameter_nrmse": 0.0141450044488686,
+    "lm_parameter_nrmse": 0.0141452232642202,
+    "de_parameter_nrmse": 0.0141446638263053
+  }
+}

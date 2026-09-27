@@ -1,0 +1,10 @@
+# CPU smoke checks and scientific code. Select a CUDA-enabled torch build for formal GPU runs.
+numpy>=1.24,<3
+torch>=2.1
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+SciencePlots>=2.1
+scikit-learn>=1.3
+openpyxl>=3.1
+pytest>=7.4
